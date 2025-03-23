@@ -37,6 +37,11 @@ Packer. To run a live installation, perform the following:
 
     curl drega.dev/replicate | bash
 
-drega.dev/replicate is a mirror to the automated install scripts currently hosted by Akamai.
+drega.dev/replicate is a mirror for the install scripts served elsewhere.
+
+## MODIFICATIONS
+
+### nvim lualine
+A modified version of theme '16 color' is used
 
 Enjoy!
