@@ -11,7 +11,7 @@ STAGES
 
     init    < rename install.sh
     |
-    | `drega.dev | bash`   ! configure server
+    | `drega.dev | bash` ! configure server
     |
     |   . ArchInstall
     |   . Configure autologin 
