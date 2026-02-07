@@ -18,14 +18,18 @@ echo -e "${GREEN}++CONFIGURE.sh++${RESET}"
 rm -f /home/roe/.bash_profile configure.sh
 #sudo chown roe:roe $HOME/.bash_profile.bak
 cat /home/roe/.bash_profile.bak > /home/roe/.bash_profile
-echo "/home/roe/replicate.sh" >> /home/roe/.bash_profile
+echo "source replicate.sh" >> /home/roe/.bash_profile
 
 # If pacman lockfile, delete it
 rm -f /var/lib/pacman/db.lck
 
+echo -e "${GREEN}Ensuring SSH..${RESET}"
 sudo pacman -S openssh --noconfirm
+
 echo -e "${GREEN}Done.${RESET}"
 cat $HOME/.bash_profile
-sleep 10
+ls
+#sleep 10
+sudo systemctl status sshd
 sudo systemctl start sshd
 # END OF PACKER CONFIG
