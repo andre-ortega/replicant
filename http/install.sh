@@ -35,9 +35,10 @@ echo "roe ALL=(ALL) NOPASSWD: ALL" > /mnt/etc/sudoers.d/00_roe
 curl -O $PACKER_HTTP_IP:$PACKER_HTTP_PORT/configure.sh
 curl -O $PACKER_HTTP_IP:$PACKER_HTTP_PORT/replicate.sh
 curl -O $PACKER_HTTP_IP:$PACKER_HTTP_PORT/replicant.sh
-mv configure.sh replicate.sh replicant.sh /mnt/home/roe/
+curl -O $PACKER_HTTP_IP:$PACKER_HTTP_PORT/sub.sh
+mv configure.sh replicate.sh replicant.sh sub.sh /mnt/home/roe/
 cp /mnt/home/roe/.bash_profile /mnt/home/roe/.bash_profile.bak
-echo "sudo chown roe:roe ./configure.sh replicate.sh replicant.sh" >> /mnt/home/roe/.bash_profile
-echo "chmod +x /home/roe/configure.sh replicate.sh replicant.sh" >> /mnt/home/roe/.bash_profile
+echo "sudo chown roe:roe ./configure.sh replicate.sh replicant.sh sub.sh" >> /mnt/home/roe/.bash_profile
+echo "chmod +x /home/roe/configure.sh replicate.sh replicant.sh sub.sh" >> /mnt/home/roe/.bash_profile
 echo "/home/roe/configure.sh" >> /mnt/home/roe/.bash_profile
 shutdown -r now
