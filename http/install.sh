@@ -46,6 +46,7 @@ mkdir /mnt/etc/systemd/system/getty@tty1.service.d/
 mv autologin.conf /mnt/etc/systemd/system/getty@tty1.service.d/autologin.conf
 echo "roe ALL=(ALL) NOPASSWD: ALL" > /mnt/etc/sudoers.d/00_roe
 
+# if --SIM (set configure scripts otherwise skip to replicate.sh)
 mv configure.sh replicate.sh replicant.sh sub.sh /mnt/home/roe/
 cp /mnt/home/roe/.bash_profile /mnt/home/roe/.bash_profile.bak
 echo "sudo chown roe:roe ./configure.sh replicate.sh replicant.sh sub.sh" >> /mnt/home/roe/.bash_profile
