@@ -33,7 +33,10 @@ cp $HOME/git/d07f1135/.gitconfig $HOME
 echo -e "${GREEN}FINALIZE.sh: Cloning more projects..${RESET}"
 cd $HOME/git
 git clone git@github.com:andre-ortega/zmk-config-corneview.git
+git clone git@github.com:andre-ortega/rust-book.git
 git clone git@github.com:andre-ortega/drega.git
+git clone git@github.com:andre-ortega/giftbox-arcade.git
+git clone git@github.com:andre-ortega/readme-renderer.git
 cd drega/
 git remote add heroku https://git.heroku.com/boiling-dawn-79173.git
 cd ..
@@ -41,7 +44,8 @@ git clone git@github.com:andre-ortega/replicant.git
 git clone git@github.com:andre-ortega/operation-goldhawk.git
 cd operation-goldhawk
 git remote add heroku https://git.heroku.com/operation-goldhawk.git
-cd ../
+cd $HOME/test
+git clone git@github.com:andre-ortega/C54ND80X.git
 
 echo -e "${GREEN}FINALIZE.sh: Set proper remote urls ..${RESET}"
 cd $HOME/.config/nvim
